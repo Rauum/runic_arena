@@ -1,0 +1,21 @@
+{
+  "name": "runic_arena",
+  "version": "1.0.0",
+  "description": "Jeu de cartes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^4.13.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "prisma": "^4.13.0"
+  }
+}
