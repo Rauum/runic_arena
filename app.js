@@ -1,13 +1,16 @@
 const express = require('express');
-var cors = require('cors')
+const cors = require('cors')
+const multer = require('multer');
 const app = express();
-var router = express.Router();
+const upload = multer();
+const router = express.Router();
+const bodyParser = require('body-parser')
 
+app.use(upload.array()); 
 app.use(express.static('public'));
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
-
-app.set('view engine', 'pug');
 
 const classesRouter = require('./routes/class');
 const typesRouter = require('./routes/type');
