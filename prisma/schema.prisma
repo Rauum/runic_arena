@@ -27,6 +27,7 @@ model Card {
   name String
   description String @db.Text
   image String
+  value Int
   type    Type  @relation(fields: [typeId], references: [id])
   typeId  Int   @unique
   class    Class  @relation(fields: [classId], references: [id])
