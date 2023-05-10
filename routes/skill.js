@@ -25,7 +25,7 @@ router.route('/:id')
         const skill = await prisma.skill.findUnique({where: {
             id: parseInt(req.params.id)
         }})
-        res.send(type)
+        res.send(skill)
     })
     .put(async function(req, res) {
         console.log(req.body)
