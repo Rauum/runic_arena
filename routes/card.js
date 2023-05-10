@@ -7,7 +7,7 @@ const prisma = new PrismaClient()
 /* Routes cards. */
 router.route('/')
     .get(async function(req, res) {
-        const cards = await prisma.card.findMany({})
+        const cards = await prisma.card.findMany({include: { skills: true }})
         res.send(cards)
     })
     .post(async function(req, res) {
@@ -24,8 +24,8 @@ router.route('/:id')
     .get(async function(req, res) {
         const card = await prisma.card.findUnique({where: {
             id: parseInt(req.params.id)
-        }})
-        res.send(type)
+        }, include: { skills: true }})
+        res.send(card)
     })
     .put(async function(req, res) {
         console.log(req.body)
