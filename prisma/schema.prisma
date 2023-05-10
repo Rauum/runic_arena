@@ -13,13 +13,13 @@ datasource db {
 model Type {
   id Int @id @default(autoincrement())
   name String
-  card  Card?
+  card  Card[]
 }
 
 model Class {
   id Int @id @default(autoincrement())
   name String
-  card  Card?
+  card  Card[]
 }
 
 model Card {
@@ -29,9 +29,9 @@ model Card {
   image String?
   value Int
   type    Type  @relation(fields: [typeId], references: [id])
-  typeId  Int   @unique
+  typeId  Int   
   class    Class  @relation(fields: [classId], references: [id])
-  classId  Int   @unique
+  classId  Int  
   skills Skill[]
 }
 
