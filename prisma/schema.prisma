@@ -42,8 +42,8 @@ model Skill {
   value Int
   isPercentage Boolean
   isActive Boolean
-  rouge Int?
-  bleu Int?
-  jaune Int?
+  red Int? @default(0)
+  blue Int? @default(0)
+  yellow Int? @default(0)
   card Card[]
 }
