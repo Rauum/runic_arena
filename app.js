@@ -13,11 +13,13 @@ const classesRouter = require('./routes/class');
 const typesRouter = require('./routes/type');
 const cardsRouter = require('./routes/card');
 const skillsRouter = require('./routes/skill');
+const generateNameRouter = require('./routes/generateName');
 
 app.use('/classes', classesRouter);
 app.use('/types', typesRouter);
 app.use('/cards', cardsRouter);
 app.use('/skills', skillsRouter);
+app.use('/generateName', generateNameRouter);
 
 const port = process.env.PORT || 3000;
 
