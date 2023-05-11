@@ -1,6 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
+const multer = require("multer");
+const upload = multer({ dest: 'uploads/' })
+
+
 const { PrismaClient } = require('@prisma/client')
 const prisma = new PrismaClient()
 
@@ -10,8 +14,9 @@ router.route('/')
         const cards = await prisma.card.findMany({include: { skills: true }})
         res.send(cards)
     })
-    .post(async function(req, res) {
-        console.log(req.body)
+    .post(upload.single("image"), async function(req, res) {   
+        console.log(req.file, req.body)
+        
         const card = await prisma.card.create({
             data: { 
                 ...req.body 
