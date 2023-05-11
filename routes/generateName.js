@@ -11,10 +11,10 @@ router.route('/')
             return Math.floor(Math.random() * max);
           }
         tableauAnimaux = ["Rat","Crocodile","Lapin","Souris","Lion","Tortue","Hydre","Serpent","Loup",
-        "Cheval","Pyhton","Ours blanc","Ours Brun","Renard","Requin","Balaine","Criquet"]
+        "Cheval","Phyton","Ours blanc","Ours Brun","Renard","Requin","Balaine","Criquet","Canard","Gobelin"]
         tableauAdjectif = ["maléfique","décousu","des ténèbres","de la pénombre","chaotique","magicien","fantastique",
     "malicieux","de la mort","du ciel","balaise","courageux","de la plaine","des montagnes","des enfers","de la jungle","des océans",
-    "canibale"]
+    "canibale","chauve"]
         randomAnimal = getRandomInt(tableauAnimaux.length)
         randonAdjetif = getRandomInt(tableauAdjectif.length)
         nom = tableauAnimaux[randomAnimal] + " " + tableauAdjectif[randonAdjetif]
