@@ -14,7 +14,7 @@ router.route('/')
         "Cheval","Pyhton","Ours blanc","Ours Brun","Renard","Requin","Balaine","Criquet"]
         tableauAdjectif = ["maléfique","décousu","des ténèbres","de la pénombre","chaotique","magicien","fantastique",
     "malicieux","de la mort","du ciel","balaise","courageux","de la plaine","des montagnes","des enfers","de la jungle","des océans",
-    "canbiale"]
+    "canibale"]
         randomAnimal = getRandomInt(tableauAnimaux.length)
         randonAdjetif = getRandomInt(tableauAdjectif.length)
         nom = tableauAnimaux[randomAnimal] + " " + tableauAdjectif[randonAdjetif]

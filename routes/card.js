@@ -14,9 +14,7 @@ router.route('/')
         const cards = await prisma.card.findMany({include: { skills: true }})
         res.send(cards)
     })
-    .post(upload.single("image"), async function(req, res) {   
-        console.log(req.file, req.body)
-        
+    .post(async function(req, res) {   
         const card = await prisma.card.create({
             data: { 
                 ...req.body 
